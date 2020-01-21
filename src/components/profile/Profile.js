@@ -3,7 +3,7 @@ import { userIsNotAuthenticated } from "../../HOCs";
 class Profile extends Component {
     constructor(props) {
         super(props);
-        this.client = new Profile()
+        // this.client = new Profile()
         this.state = {
 
 
