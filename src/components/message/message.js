@@ -1,6 +1,7 @@
 import React from "react";
 // import { Link } from "react-router-dom";
 // import { userIsNotAuthenticated } from "../../HOCs";
+import { userIsAuthenticated } from "../../HOCs";
 import BlueService from '../../blueService';
 
 class Message extends React.Component {
@@ -14,7 +15,7 @@ class Message extends React.Component {
 
     getNewMessage() {
         return this.client.getMessage().then(result => {
-            console.log(result.data)
+            // console.log(result.data)
               this.setState({
             data: result.data
               })
@@ -26,6 +27,9 @@ class Message extends React.Component {
     }
 
     render() {
+        console.log(this.props)
+        console.log(this.state)
+
         if (this.state.data.message) {
             return (
                 <div>
@@ -66,4 +70,4 @@ class Message extends React.Component {
 
 
 
-export default Message;
+export default userIsAuthenticated(Message);

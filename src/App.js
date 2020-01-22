@@ -1,13 +1,14 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-
-import Home from "./pages/Home";
-import Profile from "./pages/Profile";
-import NotFound from "./pages/NotFound";
+import { Route, Switch } from "react-router-dom";
 import Message from "./components/message/message";
-import Registration from "./components/registration/Registration";
 import MessageForm from "./components/messageForm/MessageForm";
-// import Profile from "./components/profile.js/Profile"
+import Registration from "./components/registration/Registration";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import Profile from "./pages/Profile";
+
+import Message from "./components/message/message"
+// import Profile from "./components/profile/Profile"
 
 class App extends React.Component {
   render() {
@@ -25,14 +26,14 @@ class App extends React.Component {
           />
           <Route
             exact
-            path="/message"
+            path="/message/:username"
             component={Message}
           />
-          <Route
+          {/* <Route
             exact
             path="/profile"
             component={Profile}
-          />
+          /> */}
           <Route
             exact
             path="/registration"

@@ -12,6 +12,9 @@ class BlueService {
         this.config = {}
     }
 
+    // way to get token
+    // console.log(JSON.parse(localStorage.getItem("login")));
+
     // exaples of posting
 
     // var config = {
